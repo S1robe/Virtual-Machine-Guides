@@ -1,19 +1,24 @@
-<h3>It is important to note before we begin that results will vary between flavours or distributions of linux.</h3>
-<h4>This guide will cater to 3 types, Debian (Ubuntu), Arch (Manjaro), RPM (Fedora): 
-You should match your distro to one of these three types (Debian, Arch, RPM), not necessarily one of the 3 flavours (Ubuntu, Manjaro, Fedora)</h4>
+<h3 align=center>It is important to note before we begin that the installation process will vary between flavours or distributions of linux.</h3>
+<h1></h1>
+<p>
+<h4 align=center>This guide will cater to: Debian (Ubuntu), Arch (Manjaro), RPM (Fedora) </h4>
 
-<h5>If you are not using one of these types or distributions, your package manager may include virtual box, this is generally up to date
-and stable. However, if it is not listed then you will have to check on the creator's page for either source or an installation.
+<h4 align=center><u>You should match your distro to one of these three types</u></h4>
+</p>
+<h1></h1>
+
+<h4><p>If you are not using one of these types or distributions, your package manager may include virtual box, this is generally up to date
+and stable. However, if it is not listed then you will have to check on the creator's page for either source, or an installation.
 
 The installation is typically the same across any distribution with maybe Gentoo based being the odd one out, however the general form:
 Package Manager, Source, Original Creator, should have a supported version.
 
 Like mentioned before we will go through the main 3, beginning with Debian, Ubuntu
 
-You should follow and only need to follow one.
-</h5>
+<b>You should follow, and only need to follow one.</b>
+</p></h4>
 
-## (Debian) -> Ubuntu
+## **(Debian) -> Ubuntu**
 For this gudie we feature only from the package manager as the source from the distributor is 
 buggy to install, and requires far more understanding than what this guide will expect you to know
 
