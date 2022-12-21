@@ -1,0 +1,111 @@
+VMWare installation
+
+Before we begin, youll want to make sure that your device has at least 
+80GB of space that you can free up. What I mean by this is, after dedicating 
+at least 80GB to a virtual machine you will still have some space left over (IMPORTANT)
+
+The reason for this is because if you run out of space, youll have a headache later on for performance hits. 
+
+Additionally you will need at least 4GB of ram to provide for the VM with 4 spare cores. 
+If this does not work for you see the section titled "Minimum Requirements", the rest of this guide will act 
+according to the previous specs.
+
+
+<--------------------- Downloads ---------------------->
+(Windows)
+
+--| Download Ubuntu 22.04 LTS
+The next thing we need to download is the latest version of Ubuntu. This guide will use the 22.04 LTS version, that is
+long term support. This type of version generally is more stable, and, well, supported.
+You can either follow this link: https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64
+or go to ubuntu.com, at the top middle of the page clicking download, then the one that says "22.04 LTS"
+The download will begin automagically!
+
+--| Download VMWare
+Start off by visiting this link: https://customerconnect.vmware.com/en/downloads/details?downloadGroup=WKST-PLAYER-1700&productId=1377&rPId=97014
+or going to vmware.com, clicking the search icon, searching "Workstation Player", clicking the first link, scroll down, click Resources
+Scroll down, and click Download; which opens a new window, then click "Go to Downloads", then click "Download Now" for the Windows version.
+
+--| Install VMware
+Once you have the installer downloaded, double click it to begin the installation.
+It will propt you for administrative access, allow it. It needs this to manager the internet connection among other things 
+we will discuss later.
+
+-----| Configuring install
+If you dont know what you are doing just click next, and accept the install.
+
+Otherwise, Click next, accept thier TOS, and check "Enhanced Keyboard Driver", and leave PATH checked.
+The keyboard driver makes it easier for the VM to use the keyboard, and PATH enables it use tools later on.
+Click Next, and I uncheck the Customer Experience Improovement Program, but these two are up to you. click next, and install.
+
+It will install it and request a restart, you do not need a license.
+
+--| Ubuntu VM Creation
+Now to the fun part, the Virtual Machine. 
+run VMware, if it is not already open, and click the "Create New Virtual Machine" button in the middle of the application.
+
+If your Ubuntu ISO is not downloaded yet, youll need to wait untill it has completed before continuing :/
+Once you click New, a window appears with a bunch of boxes. 
+
+Select the Installer Disc, it will tell you its using "Easy Install", thats just a sped up version of the install, this doesnt affect the machine
+Enter the user account information, and click next.
+
+------| VM Storage
+Now this is where we give the VM storage, we need 80 GB so either type or drag this to where it says 80GB.
+Make sure that you actually have more than 80Gb, otherwise youll have performance issues, among other headaches. 
+Whether you choose to leave it as multiple files or single file is up to you, I choose single file, mostly for performance.
+After clicking next, make sure to click "Customize Hardware"
+
+------| VM Hardware
+Now to change the hardware section of the virutal machine. There will be a few options in here we need to change.
+Fist make sure Memory says "4 GB" or something more, if you need to give your machine less, see the "Minimization" section
+Next click "Processors" and set it to 4. Leave the other things unchecked.
+Click Close, and click "Finish"
+
+--| Install
+Youll be back on the first screen we started at. and if you checked "Power on VM after creation" it will autostart.
+If not already started, click on the VM and start it.
+Now just give it some time, some words and phrases will come onto screen, they can be ignored unless you dont 
+see the Orange Ubuntu logo on screen.
+
+The screen will be black for a while, just let it load untill there is text on screen, at which point youll want to select 
+"Try or Install Ubuntu"
+
+Once the Install screen shows up, which will be a purplish background with a window that shows up.
+
+Select Install Ubuntu
+Were, going to use a Minimal install. If you are okay with all the extra bloat feel free to
+install the normal installation. Then click continue, and make sure erase disk and install Ubuntu. Then click install now.
+It will ask again to confirm, click continue.
+
+Select your closest time zone, name your user, and the computer whatever you like. 
+As a security advocate id suggest you pick a strong password, and require it upon login. 
+You can safely ignore the "Active Directoy" box, and click continue.
+
+If you selected minimal install yours will likely take longer as it needs remove all the extra software prior to the install
+In the next section we will fix the resolution and setup Ubuntu quickly.
+
+Once Ubuntu is installed it will request you to restart, after which it will ask you to remove the install media and hit enter.
+You can safely ignore this and hit enter.
+
+Once it restarts youll be brought to the login screen.
+
+At this point it will begin the installation period, provided theres no errors and you get a desktop environment,
+you have successfully installed Ubuntu 22.04 to VMware on your computer! Yay!
+
+----| Settings
+
+At this point we're only missing updates, which we can fix with the following command:
+sudo apt update && sudo apt upgrade 
+
+We need internet at this point, so make sure that in the top right you either have wifi, or see the 3 node looking icon. (Ethernet)
+
+Then press the windows key and then type "Terminal", open terminal and run the command above.
+You can also click the 9 dots on the bottom left, and click on terminal in the middle of the screen. Then run the command
+above.
+
+It will propmt for your password, and then download and install any required update
+
+And just like that you have a working and up-to-date virtual machine running Ubuntu 22.04 LTS
+
+||||------End Windows-----||||

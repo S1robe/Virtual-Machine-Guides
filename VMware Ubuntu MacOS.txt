@@ -1,0 +1,114 @@
+ 
+Before we begin, youll want to make sure that your device has at least 
+80GB of space that you can free up. What I mean by this is, after dedicating 
+at least 80GB to a virtual machine you will still have some space left over (IMPORTANT)
+
+The reason for this is because if you run out of space, youll have a headache later on for performance hits. 
+
+Additionally you will need at least 4GB of ram to provide for the VM with 4 spare cores. 
+If this does not work for you see the section titled "Minimum Requirements", the rest of this guide will act 
+according to the previous specs.
+
+
+--| Download Ubuntu 22.04 LTS
+The next thing we need to download is the latest version of Ubuntu. This guide will use the 22.04 LTS version, that is
+long term support. This type of version generally is more stable, and, well, supported.
+You can either follow this link: https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64
+or go to ubuntu.com, at the top middle of the page clicking download, then the one that says "22.04 LTS"
+The download will begin automagically!
+
+--| Download VM Fusion
+Either click this link : "https://customerconnect.vmware.com/en/downloads/details?downloadGroup=FUS-1225&productId=1040"
+or head to vmware.com and then go to resources in the top right, then head to product download.Now search for vmware fusion, and download the latest version. This will run on either arm or intel based Mac's
+
+
+--| Install VM Fusion
+Once you have the installer downloaded, double click it to begin the installation.
+It will propt you for administrative access, allow it. Make sure that youve given your mac permissions to install, otherwise this might not install properly.
+
+To grant permission, click the magnifying glass at the top right, type “Security,” and then press Enter. Alternatively, you can click Applications > System Preferences > Security and Privacy. Near the bottom of the General tab, you should see some text that says software from Oracle America, Inc. was blocked. Click “Allow,” and then reinstall.a
+
+-----| Configuring install
+If you dont know what you are doing just click next, and accept the install.
+
+Click Next, and I uncheck the Customer Experience Improovement Program, but these two are up to you. click next, and install.
+
+It will install it and request a restart, you do not need a license.
+
+--| Ubuntu VM Creation
+Now to the fun part, the Virtual Machine. 
+run VM Fusion, if it is not already open, and click the "New" button in the top left of the application.
+
+If your Ubuntu ISO is not downloaded yet, youll need to wait untill it has completed before continuing :/
+Once you click New, a window appears with a bunch of boxes. 
+
+Select install from disc or Image
+Drag the disc image to the create new virtual machine window and select continue.
+
+In the drop down, select Ubuntu, and fill out the rest of the forms.
+Select either Seamless or Isolated, For our purposes it wont matter.
+Seamless will let you share files to and from the VM
+Isolated will not let you share files to and from the VM
+
+Click Customize Settings
+
+------| VM Storage
+Click on the Hard Disk.
+
+Now this is where we give the VM storage, we need 80 GB so either type or drag this to where it says 80GB.
+Make sure that you actually have more than 80Gb, otherwise youll have performance issues, among other headaches. 
+Whether you choose to leave it as multiple files or single file is up to you, I choose single file, mostly for performance.
+After clicking next, make sure to click "Customize Hardware"
+
+------| VM Hardware
+Now to change the hardware section of the virutal machine. There will be a few options in here we need to change.
+Select under System Hardware, select Memory
+Make sure Memory says "4 GB" or something more, if you need to give your machine less, see the "Minimization" section
+Next click "Processors" and set it to 4. Leave the others as they are and click "Apply"
+
+--| Install
+If not already started, click on the VM and start it.
+Now just give it some time, some words and phrases will come onto screen, they can be ignored unless you dont 
+see the Orange Ubuntu logo on screen.
+
+The screen will be black for a while, just let it load untill there is text on screen, at which point youll want to select 
+"Try or Install Ubuntu"
+
+Once the Install screen shows up, which will be a purplish background with a window that shows up.
+
+Select Install Ubuntu
+Were, going to use a Minimal install. If you are okay with all the extra bloat feel free to
+install the normal installation. Then click continue, and make sure erase disk and install Ubuntu. Then click install now.
+It will ask again to confirm, click continue.
+
+Select your closest time zone, name your user, and the computer whatever you like. 
+As a security advocate id suggest you pick a strong password, and require it upon login. 
+You can safely ignore the "Active Directoy" box, and click continue.
+
+If you selected minimal install yours will likely take longer as it needs remove all the extra software prior to the install
+In the next section we will fix the resolution and setup Ubuntu quickly.
+
+Once Ubuntu is installed it will request you to restart, after which it will ask you to remove the install media and hit enter.
+You can safely ignore this and hit enter.
+
+Once it restarts youll be brought to the login screen.
+
+At this point it will begin the installation period, provided theres no errors and you get a desktop environment,
+you have successfully installed Ubuntu 22.04 to VMware on your computer! Yay!
+
+----| Settings
+
+At this point we're only missing updates, which we can fix with the following command:
+sudo apt update && sudo apt upgrade 
+
+We need internet at this point, so make sure that in the top right you either have wifi, or see the 3 node looking icon. (Ethernet)
+
+Then press the windows key and then type "Terminal", open terminal and run the command above.
+You can also click the 9 dots on the bottom left, and click on terminal in the middle of the screen. Then run the command
+above.
+
+It will propmt for your password, and then download and install any required update
+
+And just like that you have a working and up-to-date virtual machine running Ubuntu 22.04 LTS
+
+

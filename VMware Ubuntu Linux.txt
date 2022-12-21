@@ -1,0 +1,319 @@
+VMWare installation
+
+(Linux)
+It is important to note before we begin that results will vary between flavours or distributions of linux.
+This guide will cater to 3 types, Debian (Ubuntu), Arch (Manjaro), RPM (Fedora):
+You should match your distro to one of these three types (Debian, Arch, RPM),
+ not necessarily one of the 3 flavours (Ubuntu, Manjaro, Fedora)
+ 
+If you are not using one of these types or distributions, your package manager may include VMware, this is generally up to date and stable. However, if it is not listed then you will have to check on the creator's page for either source or an installation.
+
+The installation is typically the same across any distribution with maybe Gentoo based being the odd one out, however the general form:
+Package Manager, Source, Original Creator, should have a supported version.
+
+Like mentioned before we will go through the main 3, beginning with Debian, Ubuntu
+
+You should follow and only need to follow one.
+
+--| (Debian) -> Ubuntu
+For this guide we feature only the from distributor, the source, and requires far more understanding than what this guide will expect you to know
+
+This guide assumes that you have Ubuntu already installed, this guide will walk you through the steps to install virtual box and create an ubuntu virtual machine.
+
+----| Download Ubuntu 22.04 LTS
+The next thing we need to download is the latest version of Ubuntu. This guide will use the 22.04 LTS version, that is
+long term support. This type of version generally is more stable, and, well, supported.
+You can either follow this link: https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64
+or go to ubuntu.com, at the top middle of the page clicking download, then the one that says "22.04 LTS"
+The download will begin automagically!
+
+Once the download is complete you can move on
+
+----| From Distributor (Installer)
+
+--| Download VMWare
+Start off by visiting this link: https://customerconnect.vmware.com/en/downloads/details?downloadGroup=WKST-PLAYER-1700&productId=1377&rPId=97014
+or going to vmware.com, clicking the search icon, searching "Workstation Player", clicking the first link, scroll down, click Resources
+Scroll down, and click Download; which opens a new window, then click "Go to Downloads", then click "Download Now" for the Linux Version.
+
+This will download a .bundle file
+
+Once it is downloaded, open terminal, and navigate to ~/Downloads, from here youll need to makeit executable: sudo chmod +x ./<name of downloaded file>
+
+And then run it with sudo ./<name of downloaded file>
+
+This will unpack and install VMWare
+
+After it completes run VMWare, there will be a series of EULA's to accept.
+At the end you do not need a license key, click continue, and it will open up
+
+--| Ubuntu VM Creation
+Now to the fun part, the Virtual Machine. 
+run VMware, if it is not already open, and click the "Create New Virtual Machine" button in the middle of the application.
+
+If your Ubuntu ISO is not downloaded yet, youll need to wait untill it has completed before continuing :/
+Once you click New, a window appears with a bunch of boxes. 
+
+Select the Installer Disc, it will tell you its using "Easy Install", thats just a sped up version of the install, this doesnt affect the machine
+Enter the user account information, and click next.
+
+------| VM Storage
+Now this is where we give the VM storage, we need 80 GB so either type or drag this to where it says 80GB.
+Make sure that you actually have more than 80Gb, otherwise youll have performance issues, among other headaches. 
+Whether you choose to leave it as multiple files or single file is up to you, I choose single file, mostly for performance.
+After clicking next, make sure to click "Customize Hardware"
+
+------| VM Hardware
+Now to change the hardware section of the virutal machine. There will be a few options in here we need to change.
+Fist make sure Memory says "4 GB" or something more, if you need to give your machine less, see the "Minimization" section
+Next click "Processors" and set it to 4. Leave the other things unchecked.
+Click Close, and click "Finish"
+
+--| Install
+Youll be back on the first screen we started at. and if you checked "Power on VM after creation" it will autostart.
+If not already started, click on the VM and start it.
+Now just give it some time, some words and phrases will come onto screen, they can be ignored unless you dont 
+see the Orange Ubuntu logo on screen.
+
+The screen will be black for a while, just let it load untill there is text on screen, at which point youll want to select 
+"Try or Install Ubuntu"
+
+Once the Install screen shows up, which will be a purplish background with a window that shows up.
+
+Select Install Ubuntu
+Were, going to use a Minimal install. If you are okay with all the extra bloat feel free to
+install the normal installation. Then click continue, and make sure erase disk and install Ubuntu. Then click install now.
+It will ask again to confirm, click continue.
+
+Select your closest time zone, name your user, and the computer whatever you like. 
+As a security advocate id suggest you pick a strong password, and require it upon login. 
+You can safely ignore the "Active Directoy" box, and click continue.
+
+If you selected minimal install yours will likely take longer as it needs remove all the extra software prior to the install
+In the next section we will fix the resolution and setup Ubuntu quickly.
+
+Once Ubuntu is installed it will request you to restart, after which it will ask you to remove the install media and hit enter.
+You can safely ignore this and hit enter.
+
+Once it restarts youll be brought to the login screen.
+
+At this point it will begin the installation period, provided theres no errors and you get a desktop environment,
+you have successfully installed Ubuntu 22.04 to VMware on your computer! Yay!
+
+----| Settings
+
+At this point we're only missing updates, which we can fix with the following command:
+sudo apt update && sudo apt upgrade 
+
+We need internet at this point, so make sure that in the top right you either have wifi, or see the 3 node looking icon. (Ethernet)
+
+Then press the windows key and then type "Terminal", open terminal and run the command above.
+You can also click the 9 dots on the bottom left, and click on terminal in the middle of the screen. Then run the command
+above.
+
+It will propmt for your password, and then download and install any required update
+
+And just like that you have a working and up-to-date virtual machine running Ubuntu 22.04 LTS
+
+--| (Arch) -> Manjaro
+
+For this section, there is no native package as of right now that contains the source or 
+
+----| Download Ubuntu 22.04 LTS
+The next thing we need to download is the latest version of Ubuntu. This guide will use the 22.04 LTS version, that is
+long term support. This type of version generally is more stable, and, well, supported.
+You can either follow this link: https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64
+or go to ubuntu.com, at the top middle of the page clicking download, then the one that says "22.04 LTS"
+The download will begin automagically!
+
+Once the download is complete you can move on
+
+----| From Distributor (Installer)
+
+--| Download VMWare
+Start off by visiting this link: https://customerconnect.vmware.com/en/downloads/details?downloadGroup=WKST-PLAYER-1700&productId=1377&rPId=97014
+or going to vmware.com, clicking the search icon, searching "Workstation Player", clicking the first link, scroll down, click Resources
+Scroll down, and click Download; which opens a new window, then click "Go to Downloads", then click "Download Now" for the Linux Version.
+
+This will download a .bundle file
+
+Once it is downloaded, open terminal, and navigate to ~/Downloads, from here youll need to makeit executable: sudo chmod +x ./<name of downloaded file>
+
+While its being downloaded youll need to make a scripts directory, I typically use /etc/init.d
+You can create this with "sudo mkdir /etc/init.d", Arch doesnt use Service Scripts so this is fine for Arch.
+
+Then run it with sudo ./<name of downloaded file>, it will ask for the scripts directory, with the default of "etc/init.d" hit enter and move forward.
+
+This will unpack and install VMWare
+
+After it completes run VMWare, there will be a series of EULA's to accept.
+At the end you do not need a license key, click continue, and it will open up
+
+--| Ubuntu VM Creation
+Now to the fun part, the Virtual Machine. 
+run VMware, if it is not already open, and click the "Create New Virtual Machine" button in the middle of the application.
+
+If your Ubuntu ISO is not downloaded yet, youll need to wait untill it has completed before continuing :/
+Once you click New, a window appears with a bunch of boxes. 
+
+Select the Installer Disc, it will tell you its using "Easy Install", thats just a sped up version of the install, this doesnt affect the machine
+Enter the user account information, and click next.
+
+------| VM Storage
+Now this is where we give the VM storage, we need 80 GB so either type or drag this to where it says 80GB.
+Make sure that you actually have more than 80Gb, otherwise youll have performance issues, among other headaches. 
+Whether you choose to leave it as multiple files or single file is up to you, I choose single file, mostly for performance.
+After clicking next, make sure to click "Customize Hardware"
+
+------| VM Hardware
+Now to change the hardware section of the virutal machine. There will be a few options in here we need to change.
+Fist make sure Memory says "4 GB" or something more, if you need to give your machine less, see the "Minimization" section
+Next click "Processors" and set it to 4. Leave the other things unchecked.
+Click Close, and click "Finish"
+
+--| Install
+Youll be back on the first screen we started at. and if you checked "Power on VM after creation" it will autostart.
+If not already started, click on the VM and start it.
+Now just give it some time, some words and phrases will come onto screen, they can be ignored unless you dont 
+see the Orange Ubuntu logo on screen.
+
+The screen will be black for a while, just let it load untill there is text on screen, at which point youll want to select 
+"Try or Install Ubuntu"
+
+Once the Install screen shows up, which will be a purplish background with a window that shows up.
+
+Select Install Ubuntu
+Were, going to use a Minimal install. If you are okay with all the extra bloat feel free to
+install the normal installation. Then click continue, and make sure erase disk and install Ubuntu. Then click install now.
+It will ask again to confirm, click continue.
+
+Select your closest time zone, name your user, and the computer whatever you like. 
+As a security advocate id suggest you pick a strong password, and require it upon login. 
+You can safely ignore the "Active Directoy" box, and click continue.
+
+If you selected minimal install yours will likely take longer as it needs remove all the extra software prior to the install
+In the next section we will fix the resolution and setup Ubuntu quickly.
+
+Once Ubuntu is installed it will request you to restart, after which it will ask you to remove the install media and hit enter.
+You can safely ignore this and hit enter.
+
+Once it restarts youll be brought to the login screen.
+
+At this point it will begin the installation period, provided theres no errors and you get a desktop environment,
+you have successfully installed Ubuntu 22.04 to VMware on your computer! Yay!
+
+----| Settings
+
+At this point we're only missing updates, which we can fix with the following command:
+sudo apt update && sudo apt upgrade 
+
+We need internet at this point, so make sure that in the top right you either have wifi, or see the 3 node looking icon. (Ethernet)
+
+Then press the windows key and then type "Terminal", open terminal and run the command above.
+You can also click the 9 dots on the bottom left, and click on terminal in the middle of the screen. Then run the command
+above.
+
+It will propmt for your password, and then download and install any required update
+
+And just like that you have a working and up-to-date virtual machine running Ubuntu 22.04 LTS
+
+
+--| (RPM) -> Fedora
+
+For this section, there is no native package as of right now that contains the source or 
+
+----| Download Ubuntu 22.04 LTS
+The next thing we need to download is the latest version of Ubuntu. This guide will use the 22.04 LTS version, that is
+long term support. This type of version generally is more stable, and, well, supported.
+You can either follow this link: https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64
+or go to ubuntu.com, at the top middle of the page clicking download, then the one that says "22.04 LTS"
+The download will begin automagically!
+
+Once the download is complete you can move on
+
+----| From Distributor (Installer)
+
+--| Download VMWare
+Start off by visiting this link: https://customerconnect.vmware.com/en/downloads/details?downloadGroup=WKST-PLAYER-1700&productId=1377&rPId=97014
+or going to vmware.com, clicking the search icon, searching "Workstation Player", clicking the first link, scroll down, click Resources
+Scroll down, and click Download; which opens a new window, then click "Go to Downloads", then click "Download Now" for the Linux Version.
+
+This will download a .bundle file
+
+Once it is downloaded, open terminal, and navigate to ~/Downloads, from here youll need to makeit executable: sudo chmod +x ./<name of downloaded file>
+Then run it with sudo ./<name of downloaded file>, it will ask for the scripts directory, with the default of "etc/init.d" hit enter and move forward.
+
+This will unpack and install VMWare
+
+After it completes run VMWare, there will be a series of EULA's to accept.
+At the end you do not need a license key, click continue, and it will open up
+
+--| Ubuntu VM Creation
+Now to the fun part, the Virtual Machine. 
+run VMware, if it is not already open, and click the "Create New Virtual Machine" button in the middle of the application.
+
+If your Ubuntu ISO is not downloaded yet, youll need to wait untill it has completed before continuing :/
+Once you click New, a window appears with a bunch of boxes. 
+
+Select the Installer Disc, it will tell you its using "Easy Install", thats just a sped up version of the install, this doesnt affect the machine
+Enter the user account information, and click next.
+
+------| VM Storage
+Now this is where we give the VM storage, we need 80 GB so either type or drag this to where it says 80GB.
+Make sure that you actually have more than 80Gb, otherwise youll have performance issues, among other headaches. 
+Whether you choose to leave it as multiple files or single file is up to you, I choose single file, mostly for performance.
+After clicking next, make sure to click "Customize Hardware"
+
+------| VM Hardware
+Now to change the hardware section of the virutal machine. There will be a few options in here we need to change.
+Fist make sure Memory says "4 GB" or something more, if you need to give your machine less, see the "Minimization" section
+Next click "Processors" and set it to 4. Leave the other things unchecked.
+Click Close, and click "Finish"
+
+--| Install
+Youll be back on the first screen we started at. and if you checked "Power on VM after creation" it will autostart.
+If not already started, click on the VM and start it.
+Now just give it some time, some words and phrases will come onto screen, they can be ignored unless you dont 
+see the Orange Ubuntu logo on screen.
+
+The screen will be black for a while, just let it load untill there is text on screen, at which point youll want to select 
+"Try or Install Ubuntu"
+
+Once the Install screen shows up, which will be a purplish background with a window that shows up.
+
+Select Install Ubuntu
+Were, going to use a Minimal install. If you are okay with all the extra bloat feel free to
+install the normal installation. Then click continue, and make sure erase disk and install Ubuntu. Then click install now.
+It will ask again to confirm, click continue.
+
+Select your closest time zone, name your user, and the computer whatever you like. 
+As a security advocate id suggest you pick a strong password, and require it upon login. 
+You can safely ignore the "Active Directoy" box, and click continue.
+
+If you selected minimal install yours will likely take longer as it needs remove all the extra software prior to the install
+In the next section we will fix the resolution and setup Ubuntu quickly.
+
+Once Ubuntu is installed it will request you to restart, after which it will ask you to remove the install media and hit enter.
+You can safely ignore this and hit enter.
+
+Once it restarts youll be brought to the login screen.
+
+At this point it will begin the installation period, provided theres no errors and you get a desktop environment,
+you have successfully installed Ubuntu 22.04 to VMware on your computer! Yay!
+
+----| Settings
+
+At this point we're only missing updates, which we can fix with the following command:
+sudo apt update && sudo apt upgrade 
+
+We need internet at this point, so make sure that in the top right you either have wifi, or see the 3 node looking icon. (Ethernet)
+
+Then press the windows key and then type "Terminal", open terminal and run the command above.
+You can also click the 9 dots on the bottom left, and click on terminal in the middle of the screen. Then run the command
+above.
+
+It will propmt for your password, and then download and install any required update
+
+And just like that you have a working and up-to-date virtual machine running Ubuntu 22.04 LTS
+
+||||-------End Linux------||||
