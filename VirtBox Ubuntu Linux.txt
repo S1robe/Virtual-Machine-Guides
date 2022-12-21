@@ -1,10 +1,10 @@
-Virtual box installation
-(Linux)
 It is important to note before we begin that results will vary between flavours or distributions of linux.
 This guide will cater to 3 types, Debian (Ubuntu), Arch (Manjaro), RPM (Fedora):
 You should match your distro to one of these three types (Debian, Arch, RPM),
- not necessarily one of the 3 flavours (Ubuntu, Manjaro, Fedora)
- 
+not necessarily one of the 3 flavours (Ubuntu, Manjaro, Fedora)
+================================================================================================================
+
+
 If you are not using one of these types or distributions, your package manager may include virtual box, this is generally up to date
 and stable. However, if it is not listed then you will have to check on the creator's page for either source or an installation.
 
