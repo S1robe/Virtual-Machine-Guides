@@ -1,11 +1,8 @@
-It is important to note before we begin that results will vary between flavours or distributions of linux.
-This guide will cater to 3 types, Debian (Ubuntu), Arch (Manjaro), RPM (Fedora):
-You should match your distro to one of these three types (Debian, Arch, RPM),
-not necessarily one of the 3 flavours (Ubuntu, Manjaro, Fedora)
-================================================================================================================
+<h3>It is important to note before we begin that results will vary between flavours or distributions of linux.</h3>
+<h4>This guide will cater to 3 types, Debian (Ubuntu), Arch (Manjaro), RPM (Fedora): 
+You should match your distro to one of these three types (Debian, Arch, RPM), not necessarily one of the 3 flavours (Ubuntu, Manjaro, Fedora)</h4>
 
-
-If you are not using one of these types or distributions, your package manager may include virtual box, this is generally up to date
+<h5>If you are not using one of these types or distributions, your package manager may include virtual box, this is generally up to date
 and stable. However, if it is not listed then you will have to check on the creator's page for either source or an installation.
 
 The installation is typically the same across any distribution with maybe Gentoo based being the odd one out, however the general form:
@@ -14,14 +11,15 @@ Package Manager, Source, Original Creator, should have a supported version.
 Like mentioned before we will go through the main 3, beginning with Debian, Ubuntu
 
 You should follow and only need to follow one.
+</h5>
 
---| (Debian) -> Ubuntu
+## (Debian) -> Ubuntu
 For this gudie we feature only from the package manager as the source from the distributor is 
 buggy to install, and requires far more understanding than what this guide will expect you to know
 
 This guide assumes that you have Ubuntu already installed, this guide will walk you through the steps to install virtual box and create an ubuntu virtual machine.
 
-----| Download Ubuntu 22.04 LTS
+### Download Ubuntu 22.04 LTS
 The next thing we need to download is the latest version of Ubuntu. This guide will use the 22.04 LTS version, that is
 long term support. This type of version generally is more stable, and, well, supported.
 You can either follow this link: https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64
@@ -30,10 +28,10 @@ The download will begin automagically!
 
 Once the download is complete you can move on
 
-----| From Package Manager
+### From Package Manager
 Open the Ubuntu Software catalogue, and search for "virtual", it will be the first one, click install, and go through the installer.
 
---| Ubuntu VM Creation
+### Ubuntu VM Creation
 Now to the fun part, the Virtual Machine. 
 run Virtual Box, if it is not already open, and click the "New *" button in the middle of the application.
 
@@ -49,18 +47,18 @@ After you do this some thing will update, and it will auto detect the version.
 For the Folder, feel free to put it anywhere you feel comfortable, I typically leave it as-is.
 Check the box that says "Skip Unattended Install", and click on "Hardware"
 
-------| VM Hardware
+### VM Hardware
 This is where we set how much power to give the VM, in our case we need 4Gb of ram, this is measured in Mega bytes,
 so youll need to set it to 4096 MB.
 Next we need 4 cores, now this says "CPU's" it means cores, set this to 4 and click on Hard Disk.
 
-------| VM Storage
+### VM Storage
 Now this is where we give the VM storage, we need 80 GB so either type or drag this to where it says 80GB.
 Make sure that you actually have more than 80Gb, otherwise youll have performance issues, among other headaches. 
 For the "File type and Variant" select VMDK (Virtual Machine Disk), This is the fastest of the three formats currently.
 I choose to preallocate full size, but it can be resized at any time provided theres free space. This guide will not cover this.
 
---| Install
+### Install
 Once you've done that click finish, now youll see something like this: <insert image here>
 Youll be back on the first screen we started at. Click on Ubuntu, if not already selected, and click "Start".
 Now just give it some time, some words and phrases will come onto screen, they can be ignored unless you dont 
@@ -92,7 +90,7 @@ Once it restarts youll be brought to the login screen.
 At this point it will begin the installation period, provided theres no errors and you get a desktop environment,
 you have successfully installed Ubuntu 22.04 to virtualbox on your computer! Yay!
 
---| Optimization & Fixing Resolution
+### Optimization & Fixing Resolution
 At this point if youve messed around with the display at all youll notice that it is flixkering and glitchy,
 we need to install drivers for the virtual display that ubuntu is using.
 
@@ -106,8 +104,7 @@ This will run the installer for the utils needed for the VM.
 
 After you do this and it installs, restart your VM and when it boots back up you will be able to resize the VM.
 
-----| Settings
-
+### Settings
 At this point we're only missing updates, which we can fix with the following command:
 sudo apt update && sudo apt upgrade 
 
@@ -120,9 +117,8 @@ above.
 It will propmt for your password, and then download and install any required update
 
 And just like that you have a working and up-to-date virtual machine running Ubuntu 22.04 LTS
-
-
---| (Arch) -> Manjaro
+ 
+## (Arch) -> Manjaro
 
 ----| Download Ubuntu 22.04 LTS
 The next thing we need to download is the latest version of Ubuntu. This guide will use the 22.04 LTS version, that is
