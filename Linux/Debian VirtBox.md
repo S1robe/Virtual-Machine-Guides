@@ -123,9 +123,10 @@ After you do this and it installs, restart your VM and when it boots back up you
 
 <p>
 At this point we're only missing updates, which we can fix with the following command:
-sudo apt update && sudo apt upgrade 
 
-We need internet at this point, so make sure that in the top right you either have wifi, or see the 3 node looking icon. (Ethernet)
+```sudo apt update && sudo apt upgrade ```
+
+Make sure that in the top right you either have wifi, or see the 3 node looking icon. (Ethernet)
 
 Then press the windows key and then type "Terminal", open terminal and run the command above.
 You can also click the 9 dots on the bottom left, and click on terminal in the middle of the screen. Then run the command

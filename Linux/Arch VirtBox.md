@@ -1,5 +1,8 @@
  
-## (Arch) -> Manjaro
+<h1></h1>
+
+<h1 align=center> Arch - Manjaro </h1>
+<p>
 
 ----| Download Ubuntu 22.04 LTS
 The next thing we need to download is the latest version of Ubuntu. This guide will use the 22.04 LTS version, that is
