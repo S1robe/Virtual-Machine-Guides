@@ -19,63 +19,72 @@ long term support. This type of version generally is more stable, and, well, sup
 **Or** go to ubuntu.com, at the top middle of the page clicking download, then the one that says "22.04 LTS" The download will begin automagically!
 </p><br>
 
-> <h2>Download Virtual Box</h2>
----
-
-Start off by visiting this link: 
-- [Virtualbox Download](https://download.virtualbox.org/virtualbox/7.0.4/VirtualBox-7.0.4-154605-Win.exe)
-
-Or head to virtualbox.org, following their download page and selecting "Windows Host"
-
-> <h2>Configure & Install Virtual Box</h2>
+> <h2>Download VMWare</h2>
 ---
 
 <p>
+Start off by visiting this link: 
+
+- [VMWare Download](https://customerconnect.vmware.com/en/downloads/details?downloadGroup=WKST-PLAYER-1700&productId=1377&rPId=97014)
+
+or going to vmware.com, clicking the search icon, searching "Workstation Player", clicking the first link, scroll down, click Resources
+Scroll down, and click Download; which opens a new window, then click "Go to Downloads", then click "Download Now" for the Windows version.
+</p><br>
+
+> <h2> Configure & Install</h2>
+---
+
+<p>
+Lets walk through the installer now.
+
 If you dont know what you are doing just click next, and accept the install.
 
-You can modify the components it includes with the install as you want, but **LEAVE NETWORKING**.
+Check <code>Enhanced Keyboard Driver</code>, and leave **PATH** checked.
 
-This will be needed to allow the virtual machine access to the internet.
-The USB support enables the virtual machine to use USB's you plug into your device.
+The keyboard driver makes it easier for the VM to use the keyboard, and PATH enables it use tools later on.
 
-Python support will include some libraries and potentially Python if you dont have it installed already.
+Click Next, and I uncheck the Customer Experience Improovement Program, but these two are up to you. click next, and install.
 
-Click finish to complete the install.
+It will install it and request a restart, you do not need a license.
 </p><br>
 
-><h2> Ubuntu VM Creation</h2>
-
+> <h2>Ubuntu VM Creation</h2>
 ---
 
 <p>
-Now to the fun part, the Virtual Machine. <br>
-Click the <code>New *</code> button in the middle of the application.
+Now to the fun part, the Virtual Machine. 
 
-Click <code>"Expert Mode"</code>, cause youll be an expert at this after following this guide.
- 
-Next youll need to select the ISO Image, this is the ubuntu you just downloaded.
-Check the box that says <code>Skip Unattended Install</code>, and click on <code>Hardware</code>
+Click the "Create New Virtual Machine" button in the middle of the application.a
+
+Select the Installer Disc, it will tell you its using <code>Easy Install</code>
+
+Thats just a sped up version of the install, this doesnt affect the machine
+
+Enter the user account information, and click next.
 </p><br>
 
-> <h2>VM Hardware (4GB Ram + 4 Cores)
+> <h2>VM Storage (80GB)</h2>
 ---
 
 <p>
-This is where we set how much power to give the VM, in our case we need <code>4GB RAM</code>, this is measured in Mega Bytes, so youll need to set it to <code>4096 MB</code>.
-Set <code>"CPU"</code> to 4 and click on Hard Disk.
+Make sure that you actually have more than 80Gb, otherwise youll have performance issues, among other headaches. 
+
+Whether you choose to leave it as multiple files or single file is up to you, I choose single file, mostly for performance.
+
+After clicking next, make sure to click "Customize Hardware"
 </p><br>
 
-> <h2> VM Storage (80GB + .vmdk)
+> <h2>VM Hardware (4GB RAM + 4 CPUS)</h2>
 ---
 
 <p>
-We need 80 GB for this Virtual Machine.
+Now to change the hardware section of the virutal machine. There will be a few options in here we need to change.
 
-<u>Make sure that you actually have more than 80Gb</u>, otherwise youll have performance issues, among other headaches. 
+Fist make sure Memory says "4 GB" or something more, if you need to give your machine less, see the "Minimization" section
 
-For the <code>"File type and Variant"</code> select <u>VMDK (Virtual Machine Disk)</u>, This is the fastest of the three formats currently. You can either pre-allocate, or allocate as you use the disk, either is acceptable.
+Next click "Processors" and set it to 4. Leave the other things unchecked.
 
-Click finish.
+Click Close, and click "Finish"
 </p><br>
 
 > <h2> Install
@@ -108,25 +117,6 @@ At this point it will begin the installation period, provided theres no errors a
 you have successfully installed Ubuntu 22.04 to virtualbox on your computer! Yay!
 </p>
 <br>
-
-
-> <h2>Optimization & Fixing Resolution
----
-
-<p>
-At this point we need to install drivers for the virtual display that ubuntu is using.
-
-To do this go to the top left of the screen, click devices, and then "Insert Guest Additions CD".
-After this is "inserted" it will "mount" automatically, an then will ask you to run it, run it and this will install
-the required device drivers.
-
-If this does not happen, on the left side of the screen will be a CD, click it, and it will open a folder, right click in the folder 
-select "Open in terminal", this will open an terminal instance, and then run the following "./autorun.sh" 
-This will run the installer for the utils needed for the VM.
-
-After you do this and it installs, restart your VM and when it boots back up you will be able to resize the VM.
-</p><br>
-
 
 > <h2>Settings
 ---
