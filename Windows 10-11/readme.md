@@ -10,7 +10,7 @@ at least 80GB to a virtual machine you will still have some space left over (IMP
 
 ---
 
-The reason for this is because if you run out of space, youll have a headache later on for performance hits. 
+If you run out of space, youll have a headache later on for performance hits. 
 
 ---
 
