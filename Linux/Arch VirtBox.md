@@ -1,5 +1,5 @@
  
-<h1></h1>
+---
 
 <h1 align=center> Arch - Manjaro </h1>
 <p>
@@ -12,7 +12,7 @@ This guide assumes that you have Manjaro already installed, this guide will walk
 ---
 
 <p>
-The next thing we need to download is the latest version of Ubuntu. This guide will use the 22.04 LTS version, that is
+The first thing we need to download is the latest version of Ubuntu. This guide will use the 22.04 LTS version, that is
 long term support. This type of version generally is more stable, and, well, supported.
 
 - [Ubuntu Download 22.04 LTS](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64)
@@ -24,7 +24,7 @@ long term support. This type of version generally is more stable, and, well, sup
 
 ---
 <p>
-Open the Ubuntu Software catalogue, and search for "virtual", it will be the first one, click install, and go through the installer.
+Open the Add Software catalogue, and search for "virtual", it will be the first one, click install, and go through the installer.
 
 If for whatever reason this is not available, follow the next section
 <br>
