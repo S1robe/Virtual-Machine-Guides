@@ -12,7 +12,7 @@ This guide assumes that you have Windows 10 or 11 already installed, this guide 
 
 <p>
 First youll need to enable WSL, you can do this from features.
-Open settings, Click "Apps and Features", then click on the right "Programs and Features". 
+Open settings, Click "Apps", then click on the right "Programs and Features". 
 
 On the Left click "Turn Windows features on or off".<br>
 This will bring up a list of features, we will need to enable the following
