@@ -6,6 +6,24 @@
 This guide assumes that you have Fedora already installed, this guide will walk you through the steps to install virtual box and create an ubuntu virtual machine on a Fedora (RPM) host.
 </p><br>
 
+
+> <h2> Enabling Intel or AMD Virtualization Support </h2>
+---
+
+<p>
+For this you will need to enable virtualization support.
+
+You can check this from your bios.
+
+ The settings typically called:  
+
+- <h3>Intel: VT-d, VT-x, SR-IOV, Hyper-V</h3>
+
+- <h3>AMD: AMD-V
+<br>
+
+
+
 > <h2>Download Ubuntu 22.04 LTS </h2>
 ---
 

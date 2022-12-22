@@ -7,6 +7,24 @@
 This guide assumes that you have Windows 10 or 11 already installed, this guide will walk you through the steps to install virtual box and create an ubuntu virtual machine on a Windows host.
 </p><br>
 
+> <h2> Enabling Intel or AMD Virtualization Support </h2>
+---
+
+<p>
+For this you will need to enable virtualization support.
+
+You can check this by opening Task Manager, and switching to the performance tab, it should say "Virtualization: Enabled"
+
+If not,
+
+ The settings for it can be found in your bios, typically by restarting and hitting the "F2" key during startup.  
+
+- <h3>Intel: VT-d, VT-x, SR-IOV, Hyper-V</h3>
+
+- <h3>AMD: AMD-V
+<br>
+
+
 > <h2>Download Ubuntu 22.04 LTS </h2>
 ---
 
