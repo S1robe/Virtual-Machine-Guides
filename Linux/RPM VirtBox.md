@@ -1,11 +1,23 @@
---| (RPM) -> Fedora -------------------------------------------------------------------------------------------------------------------
+ <h1></h1>
 
-----| Download Ubuntu 22.04 LTS
+<h1 align=center> RPM - Fedora </h1>
+<p>
+
+This guide assumes that you have Fedora already installed, this guide will walk you through the steps to install virtual box and create an ubuntu virtual machine on a Fedora (RPM) host.
+</p><br>
+
+> <h2>Download Ubuntu 22.04 LTS </h2>
+---
+
+<p>
 The next thing we need to download is the latest version of Ubuntu. This guide will use the 22.04 LTS version, that is
 long term support. This type of version generally is more stable, and, well, supported.
-You can either follow this link: https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64
-or go to ubuntu.com, at the top middle of the page clicking download, then the one that says "22.04 LTS"
-The download will begin automagically!
+
+- [Ubuntu Download 22.04 LTS](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64)
+
+**Or** go to ubuntu.com, at the top middle of the page clicking download, then the one that says "22.04 LTS" The download will begin automagically!
+</p><br>
+
 
 Once the download is complete you can move on
 

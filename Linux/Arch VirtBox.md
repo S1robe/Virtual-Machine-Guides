@@ -27,6 +27,7 @@ long term support. This type of version generally is more stable, and, well, sup
 Open the Ubuntu Software catalogue, and search for "virtual", it will be the first one, click install, and go through the installer.
 
 If for whatever reason this is not available, follow the next section
+<br>
 
 > <h2> From Distributor </h2>
 ---
@@ -112,11 +113,6 @@ Click finish.
 
 > <h2> Install
 ---
-
-
-Now youll see something like this: 
-[](/Linux/img/UbuntuComplete.jpg)
-
 
 Youll be back on the first screen we started at. Click on Ubuntu, if not already selected, and click "Start".
 

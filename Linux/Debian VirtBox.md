@@ -69,10 +69,6 @@ Click finish.
 ---
 
 
-Now youll see something like this: 
-[](/Linux/img/UbuntuComplete.jpg)
-
-
 Youll be back on the first screen we started at. Click on Ubuntu, if not already selected, and click "Start".
 
 When there is text on screen select > <code>Try or Install Ubuntu</code>
