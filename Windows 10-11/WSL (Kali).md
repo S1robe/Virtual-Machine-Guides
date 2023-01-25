@@ -4,7 +4,7 @@
 <h1 align=center>Windows 10/11</h1>
 <p>
 
-This guide assumes that you have Windows 10 or 11 already installed, this guide will walk you through the steps to install Windows Subsystem for Linux and create an ubuntu virtual machine on a Windows host.
+This guide assumes that you have Windows 10 or 11 already installed, this guide will walk you through the steps to install Windows Subsystem for Linux and create a Kali virtual machine on a Windows host.
 </p><br>
 
 > <h2> Enabling Intel or AMD Virtualization Support </h2>
@@ -73,7 +73,7 @@ This will update to include Microsoft's most recent WSLg update that will enable
 <br><br>
 
 
-> <h2> Installing Ubuntu
+> <h2> Installing Kali Linux
 ---
 
 Open Powershell or Command Prompt as admin.
@@ -81,6 +81,37 @@ Open Powershell or Command Prompt as admin.
 Then type <code>wsl --install -d kali-linux</code>
 
 And this will install Kali Linux Rolling
+
+After you get it installed, make sure you update:
+
+<code>sudo apt update && sudo apt full-upgrade</code>
+
+After this completes, youll want to install the following packages:
+
+<code>sudo apt install yasm gcc make ddd mesa-utils freeglut3-dev kali-win-kex</code>
+
+Once this finishes were almost done
+
+> <h2> Setting up Win-Kex
+---
+
+Win-Kex, is Kali-linux's response to wslg. This lets you run graphical applications on Linux, on Windows.
+
+To start run:
+
+<code>kex start</code>
+
+This starts the server and allows it to auto-start when kali is run
+
+It will prompt for some Windows firewall permissions, youll need to allow these, its so that the VNC server that this talks over can talk back and forth on your computer.
+
+Next to actually run it in my suggested mode (Seamless --sl & Sound -s)
+Run: 
+
+<code>kex --sl -s</code>
+
+This will take a second, but after it completes you can close the terminal window and use it like a normal desktop.
+
 
 
 </p>
