@@ -103,6 +103,8 @@ To start run:
 
 This starts the server and allows it to auto-start when kali is run
 
+It will ask for a password, you are setting up a VNC server, so this will be the login password, and I choose to not set a view-only password
+
 It will prompt for some Windows firewall permissions, youll need to allow these, its so that the VNC server that this talks over can talk back and forth on your computer.
 
 Next to actually run it in my suggested mode (Seamless --sl & Sound -s)
@@ -111,6 +113,8 @@ Run:
 <code>kex --sl -s</code>
 
 This will take a second, but after it completes you can close the terminal window and use it like a normal desktop.
+
+Thats it!
 
 </p>
 
