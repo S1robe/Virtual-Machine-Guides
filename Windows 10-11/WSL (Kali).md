@@ -88,9 +88,9 @@ After you get it installed, make sure you update:
 
 After this completes, youll want to install the following packages:
 
+NOTE: if you dont need graphical support you can omit the "kali-win-kex freeglut3-dev mesa-utils" packages
+ 
 <code>sudo apt install yasm gcc make ddd mesa-utils freeglut3-dev kali-win-kex</code>
-
-Once this finishes were almost done
 
 > <h2> Setting up Win-Kex
 ---
@@ -111,8 +111,6 @@ Run:
 <code>kex --sl -s</code>
 
 This will take a second, but after it completes you can close the terminal window and use it like a normal desktop.
-
-
 
 </p>
 
